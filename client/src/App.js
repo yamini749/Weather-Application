@@ -13,16 +13,16 @@ function App() {
       setError("Please enter a city name.");
       return;
     }
-    setLoading(true); // Show loading spinner
+    setLoading(true);
     try {
-      const response = await axios.get(http://localhost:5000/api/weather?city=${city});
+      const response = await axios.get(`http://localhost:5000/api/weather?city=${city}`);
       setWeather(response.data);
       setError("");
     } catch (err) {
       setError("Unable to fetch weather data. Please try again.");
       setWeather(null);
     } finally {
-      setLoading(false); // Hide loading spinner
+      setLoading(false);
     }
   };
 
@@ -35,7 +35,7 @@ function App() {
         value={city}
         onChange={(e) => setCity(e.target.value)}
       />
-      <button onClick={fetchWeather}>
+      <button onClick={fetchWeather} disabled={loading}>
         {loading ? "Loading..." : "Get Weather"}
       </button>
       {error && <p className="error">{error}</p>}
