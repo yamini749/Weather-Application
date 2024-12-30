@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+# Weather Application (MERN Stack)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A weather application built using the MERN stack (MongoDB, Express, React, Node.js). This application allows users to check the weather for their desired location.
 
-## Available Scripts
+## Features
+- Fetches real time weather data using a weather API (e.g., OpenWeatherMap or similar).
+- Displays current weather conditions such as temperature, humidity, wind speed, and weather description.
+- Allows users to search for weather by city or geographical coordinates.
+- Responsive design, works on both desktop and mobile devices.
 
-In the project directory, you can run:
+## Technologies Used
+- **Frontend**: React.js, Axios (for API requests), CSS/SCSS
+- **Backend**: Node.js, Express.js
+- **Database**: MongoDB (optional, for saving user search history or settings)
+- **External APIs**: OpenWeatherMap API (or any similar weather API)
+- **Authentication**: Optional (JWT or OAuth for user authentication if required)
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Prerequisites
+Make sure you have the following installed on your machine:
+- [Node.js](https://nodejs.org/)
+- [MongoDB](https://www.mongodb.com/try/download/community) (for database, optional if you're saving search history)
+- [Postman](https://www.postman.com/) (for testing API endpoints, optional)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Install Dependencies
 
-### `npm test`
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yamini749/Mern Application.git
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Install Node.js and npm
+node -v
+npm -v
 
-### `npm run build`
+### Create the Project
+1. Open terminal and create a new project folder
+mkdir mern-api-dashboard
+cd mern-api-dashboard
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Initialize a new Node.js project
+npm init -y
+This creates a pacakge.json file
+### Backend Dependencies
+1. Express (backend server)
+npm install express
+create server folder and add server.js file into server folder
+npm install axios
+### React and React-DOM (frontend)
+npx create-react-app client
+cd client
+npm start
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Run
+node server.js in cd server
+npm start in cd client/src/
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

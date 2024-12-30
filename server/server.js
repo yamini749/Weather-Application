@@ -4,10 +4,10 @@ const axios = require('axios');
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({ origin: 'http://localhost:3000' }));
 
 // Replace this with your actual OpenWeatherMap API key
-const API_KEY = "82b3020ac86da95ab6dd47255bbcd7fc";
+const API_KEY = "ed71fa32fd4cd99e5fb19f7399b3a36c";
 
 // Weather API Endpoint
 app.get('/api/weather', async (req, res) => {
@@ -18,17 +18,20 @@ app.get('/api/weather', async (req, res) => {
   }
 
   try {
-    // Fetch data from OpenWeatherMap API
     const response = await axios.get(
       `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}`
     );
 
-    // Send the API response data to the frontend
     res.json(response.data);
   } catch (err) {
     console.error(err);
     res.status(500).send('Error fetching weather data');
   }
+});
+
+// Default Route
+app.get('/', (req, res) => {
+  res.send('Welcome to the Weather API');
 });
 
 // Start the Server
