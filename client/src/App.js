@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import './App.css';
+import "./App.css";
 
 function App() {
   const [city, setCity] = useState("");
@@ -15,12 +15,14 @@ function App() {
     }
     setLoading(true);
     try {
-      const response = await axios.get(`http://localhost:5000/api/weather?city=${city}`);
-      console.log('Weather Data:', response.data);
+      const response = await axios.get(
+        `https://weather-application-xy77.onrender.com/api/weather?city=${city}`
+      );
+      console.log("Weather Data:", response.data);
       setWeather(response.data);
       setError("");
     } catch (err) {
-      console.error('Error:', err.response || err.message);
+      console.error("Error:", err.response || err.message);
       setError("Unable to fetch weather data. Please try again.");
       setWeather(null);
     } finally {
