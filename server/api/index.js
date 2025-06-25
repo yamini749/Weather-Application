@@ -8,9 +8,10 @@ const app = express();
 // Middleware
 app.use(cors({ origin: "https://beamish-pie-ff4b3e.netlify.app" }));
 
-// Weather API Endpoint
+// OpenWeatherMap API Key
 const API_KEY = "ed71fa32fd4cd99e5fb19f7399b3a36c";
 
+// Routes
 app.get("/weather", async (req, res) => {
   const city = req.query.city;
 
@@ -29,10 +30,11 @@ app.get("/weather", async (req, res) => {
   }
 });
 
-// Root endpoint
 app.get("/", (req, res) => {
   res.send("<h1>Weather API</h1><p>Server is running successfully!</p>");
 });
 
-// Export the app as a serverless function
-module.exports = serverless(app);
+// Important: Export *handler* for Vercel serverless
+module.exports = {
+  handler: serverless(app),
+};
