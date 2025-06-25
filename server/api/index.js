@@ -5,7 +5,7 @@ const axios = require("axios");
 const app = express();
 
 // Middleware
-app.use(cors({ origin: "https://beamish-pie-ff4b3e.netlify.app" }));
+app.use(cors({ origin: "https://weather-app-chi-eight-92.vercel.app" }));
 
 // Weather API Endpoint
 const API_KEY = "ed71fa32fd4cd99e5fb19f7399b3a36c";
