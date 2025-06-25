@@ -8,7 +8,6 @@ const app = express();
 // Middleware
 app.use(cors({ origin: "https://beamish-pie-ff4b3e.netlify.app" }));
 
-// OpenWeatherMap API Key
 const API_KEY = "ed71fa32fd4cd99e5fb19f7399b3a36c";
 
 // Routes
@@ -34,7 +33,5 @@ app.get("/", (req, res) => {
   res.send("<h1>Weather API</h1><p>Server is running successfully!</p>");
 });
 
-// Important: Export *handler* for Vercel serverless
-module.exports = {
-  handler: serverless(app),
-};
+// ✅ Correct default export for Vercel Node.js runtime
+module.exports = serverless(app);
