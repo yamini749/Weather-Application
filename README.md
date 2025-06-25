@@ -24,16 +24,6 @@ A weather application built using the **MERN stack** (MongoDB, Express, React, N
 
 ## 🧑‍💻 Getting Started
 
-### ✅ Prerequisites
-
-Ensure you have the following installed:
-
-- [Node.js](https://nodejs.org/)
-- [MongoDB](https://www.mongodb.com/try/download/community) *(optional if using database)*
-- [Postman](https://www.postman.com/) *(for API testing, optional)*
-
----
-
 ## 📦 Install Dependencies
 
 ### 1. Clone the Repository
@@ -109,7 +99,7 @@ The Node server will run at `http://localhost:5000` *(or any configured port)*
 
 ## 🌐 Live Demo
 
-Deployment link : [Frontend] (https://beamish-pie-ff4b3e.netlify.app/)
+Deployment link : [Frontend] (https://weather-app-chi-eight-92.vercel.app)
 
 ---
 
