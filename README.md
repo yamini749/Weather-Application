@@ -1,60 +1,125 @@
-# Weather Application (MERN Stack)
+# 🌦️ Weather Application (MERN Stack)
 
-A weather application built using the MERN stack (MongoDB, Express, React, Node.js). This application allows users to check the weather for their desired location.
+A weather application built using the **MERN stack** (MongoDB, Express, React, Node.js). This application allows users to check the weather for their desired location.
 
-## Features
-- Fetches real time weather data using a weather API (e.g., OpenWeatherMap or similar).
-- Displays current weather conditions such as temperature, humidity, wind speed, and weather description.
-- Allows users to search for weather by city or geographical coordinates.
-- Responsive design, works on both desktop and mobile devices.
+---
 
-## Technologies Used
-- **Frontend**: React.js, Axios (for API requests), CSS/SCSS
-- **Backend**: Node.js, Express.js
-- **Database**: MongoDB (optional, for saving user search history or settings)
-- **External APIs**: OpenWeatherMap API (or any similar weather API)
-- **Authentication**: Optional (JWT or OAuth for user authentication if required)
+## 🚀 Features
 
-## Getting Started
+- Fetches real-time weather data using a weather API (e.g., OpenWeatherMap).
+- Displays temperature, humidity, wind speed, and weather description.
+- Search by city name or geographic coordinates.
+- Responsive design — works on both desktop and mobile devices.
+- (Optional) Store user search history or preferences in MongoDB.
 
-### Prerequisites
-Make sure you have the following installed on your machine:
+---
+
+## 🛠️ Technologies Used
+
+- **Frontend:** React.js, CSS  
+- **Backend:** Node.js, Express.js  
+- **External API:** OpenWeatherMap API  
+
+---
+
+## 🧑‍💻 Getting Started
+
+### ✅ Prerequisites
+
+Ensure you have the following installed:
+
 - [Node.js](https://nodejs.org/)
-- [MongoDB](https://www.mongodb.com/try/download/community) (for database, optional if you're saving search history)
-- [Postman](https://www.postman.com/) (for testing API endpoints, optional)
+- [MongoDB](https://www.mongodb.com/try/download/community) *(optional if using database)*
+- [Postman](https://www.postman.com/) *(for API testing, optional)*
 
-### Install Dependencies
+---
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yamini749/Mern Application.git
+## 📦 Install Dependencies
 
-### Install Node.js and npm
-node -v
-npm -v
+### 1. Clone the Repository
 
-### Create the Project
-1. Open terminal and create a new project folder
-mkdir mern-api-dashboard
-cd mern-api-dashboard
+```bash
+git clone https://github.com/yamini749/Mern-Application.git
+cd Mern-Application
+```
 
-2. Initialize a new Node.js project
+---
+
+## 🔧 Backend Setup
+
+### 2. Initialize Node.js Project
+
+```bash
+mkdir server
+cd server
 npm init -y
-This creates a pacakge.json file
-### Backend Dependencies
-1. Express (backend server)
+```
+
+### 3. Install Backend Dependencies
+
+```bash
 npm install express
-create server folder and add server.js file into server folder
-npm install axios
-### React and React-DOM (frontend)
+```
+
+### 4. Create Backend Entry File
+
+Create a `server.js` file inside the `server/` folder with your Express app.
+
+---
+
+## 🎨 Frontend Setup
+
+### 5. Create React App
+
+```bash
 npx create-react-app client
 cd client
+```
+
+### 6. Start Frontend
+
+```bash
 npm start
+```
 
-### Run
-node server.js in cd server
-npm start in cd client/src/
+---
 
+## ▶️ Running the Application
 
+Open **two terminals** or use a process manager like `concurrently`.
 
+### Terminal 1 – Backend:
 
+```bash
+cd server
+node server.js
+```
+
+### Terminal 2 – Frontend:
+
+```bash
+cd client
+npm start
+```
+
+The React app will run at `http://localhost:3000`  
+The Node server will run at `http://localhost:5000` *(or any configured port)*
+
+---
+
+## 🌐 Live Demo
+
+Deployment link : [Frontend] (https://beamish-pie-ff4b3e.netlify.app/)
+
+---
+
+## 🙋‍♀️ Author
+
+**Yamini Settipalli**
+
+- GitHub: [@yamini749](https://github.com/yamini749)  
+- Portfolio: [https://settipalliyamini.netlify.app](https://settipalliyamini.netlify.app)
+
+---
+
+⭐ Feel free to fork, improve, or contribute to the project!
