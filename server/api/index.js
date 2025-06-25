@@ -1,16 +1,15 @@
 const express = require("express");
 const cors = require("cors");
 const axios = require("axios");
-const serverless = require("serverless-http");
 
 const app = express();
 
 // Middleware
 app.use(cors({ origin: "https://beamish-pie-ff4b3e.netlify.app" }));
 
+// Weather API Endpoint
 const API_KEY = "ed71fa32fd4cd99e5fb19f7399b3a36c";
 
-// Routes
 app.get("/weather", async (req, res) => {
   const city = req.query.city;
 
@@ -29,9 +28,10 @@ app.get("/weather", async (req, res) => {
   }
 });
 
+// Root endpoint
 app.get("/", (req, res) => {
   res.send("<h1>Weather API</h1><p>Server is running successfully!</p>");
 });
 
-// ✅ Correct default export for Vercel Node.js runtime
-module.exports = serverless(app);
+// Export the app as a serverless function
+module.exports = app;
