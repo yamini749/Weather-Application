@@ -16,7 +16,7 @@ function App() {
     setLoading(true);
     try {
       const response = await axios.get(
-        `https://weather-application-298r.vercel.app/api/weather?city=${city}`
+        `https://weather-application-298r.vercel.app/weather?city=${city}`
       );
       console.log("Weather Data:", response.data);
       setWeather(response.data);
